@@ -1,3 +1,5 @@
+import golosinas.*
+
 object mariano {
 	const golosinas = []
 	

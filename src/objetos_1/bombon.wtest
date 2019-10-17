@@ -1,6 +1,7 @@
 import golosinas.*
 
 describe "test de bombon" {
+	const bombon = new Bombon()
 
 	test "peso inicial" {
 		assert.equals(15, bombon.peso())
@@ -24,5 +25,4 @@ describe "test de bombon" {
 	test "libre de gluten" {
 		assert.that(bombon.libreGluten())	
 	}
-	
 }
