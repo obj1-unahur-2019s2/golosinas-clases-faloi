@@ -51,6 +51,10 @@ object mariano {
 		
 //		return golosinas.map { g => g.peso() }.sum()
 	}
+	
+	method baniar(unaGolosina) {
+		return new GolosinaBaniada(golosinaInterior = unaGolosina)
+	}
 }
 
 
