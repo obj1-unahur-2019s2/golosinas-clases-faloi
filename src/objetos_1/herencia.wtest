@@ -1,0 +1,18 @@
+import golosinas.*
+
+describe "tests con herencia" {
+	const duro = new BombonDuro()
+	const comun = new Bombon()
+	
+	test "mordisco es distinto en el duro" {
+		comun.mordisco()
+		assert.equals(comun.peso(), 11)
+		
+		duro.mordisco()
+		assert.equals(duro.peso(), 13.5)
+	}
+	
+	test "precio es igual en ambos" {
+		assert.equals(comun.precio(), duro.precio())
+	}
+ }

@@ -8,6 +8,10 @@ class Bombon {
 	method libreGluten() { return true }
 }
 
+class BombonDuro inherits Bombon {
+	override method mordisco() { peso = peso * 0.9 }
+}
+
 class Alfajor {
 	var peso = 300
 	
@@ -19,12 +23,13 @@ class Alfajor {
 }
 
 class Caramelo {
+	var gusto
 	var peso = 5
 	
 	method precio() { return 1 }
 	method peso() { return peso }
 	method mordisco() { peso -= 1 }
-	method gusto() { return "frutilla" }
+	method gusto() { return gusto }
 	method libreGluten() { return true }
 }
 
