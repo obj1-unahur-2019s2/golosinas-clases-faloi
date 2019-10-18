@@ -4,7 +4,7 @@ describe "tests con herencia" {
 	const duro = new BombonDuro()
 	const comun = new Bombon()
 	
-	test "mordisco es distinto en el duro" {
+	test "mordisco es distinto en el bombón duro" {
 		comun.mordisco()
 		assert.equals(comun.peso(), 11)
 		
@@ -14,5 +14,14 @@ describe "tests con herencia" {
 	
 	test "precio es igual en ambos" {
 		assert.equals(comun.precio(), duro.precio())
+	}
+	
+	test "mordisco en caramelo relleno" {
+		const relleno = new CarameloRelleno(gusto = "frutilla")
+		assert.equals(relleno.gusto(), "frutilla")
+		
+		relleno.mordisco()
+		assert.equals(relleno.gusto(), "chocolate")
+		assert.equals(relleno.peso(), 4)
 	}
  }

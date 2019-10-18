@@ -33,6 +33,13 @@ class Caramelo {
 	method libreGluten() { return true }
 }
 
+class CarameloRelleno inherits Caramelo {
+	override method mordisco() {
+		peso -= 1
+		gusto = "chocolate"
+	}
+}
+
 class Chupetin {
 	var peso = 7
 	
@@ -61,6 +68,20 @@ class Oblea {
 	}
 	method gusto() { return "vainilla" }
 	method libreGluten() { return false }
+}
+
+class ObleaCrujiente inherits Oblea {
+	var cantidadMordiscos = 0
+
+	override method mordisco() {
+		if (cantidadMordiscos < 3) {
+			peso -= 3
+		}
+		
+		super()
+		
+		cantidadMordiscos += 1
+	}
 }
 
 class Chocolatin {
